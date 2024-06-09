@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="8">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="amazon_PNG.png" style="width:100%; max-width:150px;">
+                            </td>
+                            <td>
+                                <h2>Tax Invoice/Bill of Supply/Cash Memo</h2>
+                                <h3>(Original for Recipient)</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="information">
+                <td colspan="8">
+                    <table>
+                        <tr>
+                            <td>
+                                <strong>Sold By :</strong><br>
+                                <span id="sold-by"></span><br>
+                                <span id="sold-address"></span><br>
+                                <span id="sold-pan"></span><br>
+                                <span id="sold-gst"></span>
+                            </td>
+                            <td>
+                                <strong>Billing Address :</strong><br>
+                                <span id="billing-name"></span><br>
+                                <span id="billing-address"></span><br>
+                                <span id="billing-code"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Shipping Address :</strong><br>
+                                <span id="shipping-name"></span><br>
+                                <span id="shipping-address"></span><br>
+                                <span id="shipping-code"></span><br>
+                                <span id="supply-place"></span><br>
+                                <span id="delivery-place"></span>
+                            </td>
+                            <td>
+                                <span id="order-number"></span><br>
+                                <span id="order-date"></span><br>
+                                <span id="invoice-number"></span><br>
+                                <span id="invoice-details"></span><br>
+                                <span id="invoice-date"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="heading">
+                <td>Description</td>
+                <td>Qty</td>
+                <td>Unit Price</td>
+                <td>Net Amount</td>
+                <td>Tax Rate</td>
+                <td>Tax Type</td>
+                <td>Tax Amount</td>
+                <td>Total Amount</td>
+            </tr>
+            <tbody id="items-list">
+                <!-- Items will be dynamically inserted here -->
+            </tbody>
+            <tr class="total">
+                <td colspan="7"></td>
+                <td id="total-amount">Total: ₹0.00</td>
+            </tr>
+            <tr class="footer">
+                <td colspan="8">
+                    <span id="amount-in-words"></span><br><br>
+                    Whether tax is payable under reverse charge - <span id="reverse-charge"></span><br><br>
+                    <div style="text-align:right;">For <span id="seller-name"></span>:<br><br><img src="box.png" alt="Signature" style="width:150px;"><br>Authorized Signatory</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
